@@ -16,6 +16,8 @@
             <ColumnDefinition Width="240"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <!-- CABECERA SUPERIOR -->
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#16161B">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" Margin="0,0,35,0" Cursor="Hand">
@@ -34,14 +36,19 @@
                 </StackPanel>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,25,0" Cursor="Hand">
-                <TextBlock Text="Nicolas" Foreground="White" FontSize="14" FontWeight="SemiBold" Margin="0,0,12,0" VerticalAlignment="Center"/>
-                <Border Width="38" Height="38" CornerRadius="19" Background="#2A2A35">
+            <!-- Perfil y Cerrar Sesión -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,25,0">
+                <TextBlock x:Name="txtNombreUsuario" Text="Nicolas" Foreground="White" FontSize="14" FontWeight="SemiBold" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                <Border Width="38" Height="38" CornerRadius="19" Background="#2A2A35" Margin="0,0,15,0">
                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE77B;" Foreground="#00E5FF" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Border>
+
+                <!-- Botón de Cerrar Sesión -->
+                <Button x:Name="btnCerrarSesion" Content="Cerrar Sesión" Background="Transparent" Foreground="#FF4C4C" BorderThickness="0" Cursor="Hand" Click="BtnCerrarSesion_Click" FontWeight="Bold"/>
             </StackPanel>
         </Grid>
 
+        <!-- MENÚ LATERAL IZQUIERDO -->
         <Border Background="#16161B" Grid.Row="1" CornerRadius="12" Margin="20" Padding="0,20,0,0">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="25,15,20,15" Cursor="Hand">
@@ -61,22 +68,26 @@
             </StackPanel>
         </Border>
 
+        <!-- ZONA CENTRAL DE JUEGOS -->
         <Border Background="#16161B" Grid.Column="1" Grid.Row="1" Margin="0,20,20,20" CornerRadius="12">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="160" Height="220" Margin="15" CornerRadius="8" Cursor="Hand">
+                <!-- Carátula Juego 1 (Valorant) -->
+                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="250" Height="350" Margin="30" CornerRadius="8" Cursor="Hand">
                     <Border.Background>
                         <ImageBrush ImageSource="https://i.pinimg.com/736x/79/aa/f7/79aaf76e647b1eac1329b41a661ab60d.jpg" Stretch="UniformToFill"/>
                     </Border.Background>
                 </Border>
 
-                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="160" Height="220" Margin="15" CornerRadius="8" Cursor="Hand">
+                <!-- Carátula Juego 2 (Fortnite) -->
+                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="250" Height="350" Margin="30" CornerRadius="8" Cursor="Hand">
                     <Border.Background>
                         <ImageBrush ImageSource="https://i.3djuegos.com/juegos/8298/fortnite/fotos/ficha/fortnite-5154590.webp" Stretch="UniformToFill"/>
                     </Border.Background>
                 </Border>
 
-                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="160" Height="220" Margin="15" CornerRadius="8" Cursor="Hand">
+                <!-- Carátula Juego 3 (Minecraft) -->
+                <Border BorderBrush="#00E5FF" BorderThickness="2" Width="250" Height="350" Margin="30" CornerRadius="8" Cursor="Hand">
                     <Border.Background>
                         <ImageBrush ImageSource="https://i.pinimg.com/474x/60/ef/d6/60efd693d20f8dcedf16e91d6a69ad4a.jpg" Stretch="UniformToFill"/>
                     </Border.Background>

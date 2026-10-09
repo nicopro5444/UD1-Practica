@@ -1,0 +1,52 @@
+﻿<Window x:Class="Practica1.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inicio de Sesión" Height="550" Width="350"
+        Background="#0F0F13" WindowStartupLocation="CenterScreen">
+
+    <Border Background="#16161B" Margin="20" CornerRadius="15" Padding="25">
+        <StackPanel VerticalAlignment="Center">
+
+            <!-- Icono y Título más elegante -->
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE77B;" Foreground="#00E5FF" FontSize="45" HorizontalAlignment="Center" Margin="0,0,0,10" Padding="0,0,0,10"/>
+            <TextBlock Text="BIENVENIDO" Foreground="#00E5FF" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,25"/>
+            <!-- Campo Usuario Redondeado -->
+            <TextBlock Text="USUARIO" Foreground="#888888" FontSize="11" FontWeight="Bold" Margin="5,0,0,5"/>
+            <Border Background="#2A2A35" BorderBrush="#00E5FF" BorderThickness="1" CornerRadius="8" Height="40" Margin="0,0,0,15">
+                <TextBox x:Name="txtUsuario" Background="Transparent" Foreground="White" BorderThickness="0" Padding="10,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+            </Border>
+
+            <!-- Campo Contraseña Redondeado -->
+            <TextBlock Text="CONTRASEÑA" Foreground="#888888" FontSize="11" FontWeight="Bold" Margin="5,0,0,5"/>
+            <Border Background="#2A2A35" BorderBrush="#00E5FF" BorderThickness="1" CornerRadius="8" Height="40" Margin="0,0,0,10">
+                <PasswordBox x:Name="txtPassword" Background="Transparent" Foreground="White" BorderThickness="0" Padding="10,0,0,0" VerticalContentAlignment="Center" FontSize="14"/>
+            </Border>
+
+            <!-- Mensaje Dinámico de Error/Éxito -->
+            <TextBlock x:Name="txtMensaje" Text="" Foreground="#FF4C4C" FontSize="13" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,15" TextWrapping="Wrap" MinHeight="20"/>
+
+            <!-- Botón de Login Curvo -->
+            <Button x:Name="btnLogin" Cursor="Hand" Margin="0,0,0,12" Click="BtnLogin_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#00E5FF" CornerRadius="20" Height="42">
+                            <TextBlock Text="ACCEDER" Foreground="Black" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <!-- Botón de Salir Curvo -->
+            <Button x:Name="btnSalir" Cursor="Hand" Click="BtnSalir_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent" BorderBrush="#888888" BorderThickness="1" CornerRadius="20" Height="42">
+                            <TextBlock Text="CERRAR" Foreground="#888888" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+    </Border>
+</Window>
